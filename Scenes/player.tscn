@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://raifkve7yqnp"]
+
+[ext_resource type="Texture2D" uid="uid://dtwcjahmssnxm" path="res://Imgs/pngimg.com - darts_PNG36.png" id="1_gqyyg"]
+
+[node name="Player" type="RigidBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-56, 11, 71, 16, 122, 2, 122, -3, 72, -16, -56, -10, -112, -36, -144, -18, -144, 20, -112, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 4
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("1_gqyyg")
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(142, -4, 152, 0, 142, 4, 122, 4, 122, -4)

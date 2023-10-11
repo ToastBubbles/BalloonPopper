@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://babtkut6uvgwb"]
+
+[ext_resource type="PackedScene" uid="uid://raifkve7yqnp" path="res://Scenes/player.tscn" id="1_olp6p"]
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="2_ioks5"]
+[ext_resource type="PackedScene" uid="uid://bussdlgg353yd" path="res://Scenes/Balloon_handler.tscn" id="3_8xwoe"]
+[ext_resource type="AudioStream" uid="uid://us6jdco2vlp2" path="res://Audio/pop.wav" id="4_io2k5"]
+[ext_resource type="PackedScene" uid="uid://css8xpm3ojnnj" path="res://Scenes/background.tscn" id="5_4v2f3"]
+[ext_resource type="PackedScene" uid="uid://cnaq5vyxwll1v" path="res://Scenes/state_handler.tscn" id="6_f3qv3"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_olp6p")]
+position = Vector2(1426, 529)
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("2_ioks5")
+
+[node name="BalloonHandler" parent="." instance=ExtResource("3_8xwoe")]
+
+[node name="PopAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_io2k5")
+volume_db = 20.0
+
+[node name="Background" parent="." instance=ExtResource("5_4v2f3")]
+z_index = -1
+position = Vector2(1176, 562)
+
+[node name="StateHandler" parent="." instance=ExtResource("6_f3qv3")]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bussdlgg353yd"]
+
+[ext_resource type="Script" path="res://Scripts/Balloon_handler.cs" id="1_g24a6"]
+
+[node name="BalloonHandler" type="Node2D"]
+script = ExtResource("1_g24a6")
+
+[node name="BalloonContainer" type="Node2D" parent="."]
+
+[node name="ShredContainer" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]

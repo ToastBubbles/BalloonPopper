@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddg5isk0hs1bv"]
+
+[ext_resource type="Script" path="res://Scripts/Shred.cs" id="1_84ixp"]
+[ext_resource type="Texture2D" uid="uid://85aajwgharb4" path="res://Imgs/shred.png" id="2_3s8sg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qc2m8"]
+size = Vector2(25, 13)
+
+[node name="Shred" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 0
+mass = 0.01
+script = ExtResource("1_84ixp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.842994
+scale = Vector2(2, 2)
+texture = ExtResource("2_3s8sg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_qc2m8")

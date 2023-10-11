@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnaq5vyxwll1v"]
+
+[ext_resource type="Script" path="res://Scripts/State_handler.cs" id="1_qpldk"]
+[ext_resource type="AudioStream" uid="uid://r0odla2wusi3" path="res://Audio/failSound.wav" id="2_blxdw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d8qly"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_n1eu5"]
+font_size = 50
+
+[node name="StateHandler" type="Node2D"]
+script = ExtResource("1_qpldk")
+
+[node name="FailAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_blxdw")
+volume_db = 20.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Score" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Test"
+label_settings = SubResource("LabelSettings_d8qly")
+
+[node name="Misses" type="Label" parent="."]
+offset_top = 58.0
+offset_right = 40.0
+offset_bottom = 81.0
+label_settings = SubResource("LabelSettings_n1eu5")
