@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://raifkve7yqnp"]
+
+[ext_resource type="Texture2D" uid="uid://dtwcjahmssnxm" path="res://pngimg.com - darts_PNG36.png" id="1_vxlfx"]
+
+[node name="Player" type="RigidBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-153, 0, -120, -5, -120, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("1_vxlfx")
