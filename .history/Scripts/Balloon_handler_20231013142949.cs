@@ -29,7 +29,7 @@ public partial class Balloon_handler : Node2D
 	Random rand = new();
 	public override void _Ready()
 	{
-		stateHandler = GetParent().GetNode<State_handler>("StateHandler");
+		stateHandler = GetParent().Get
 		timer = GetNode<Timer>("Timer");
 		balloonContainer = GetNode<Node2D>("BalloonContainer");
 		shredContainer = GetNode<Node2D>("ShredContainer");

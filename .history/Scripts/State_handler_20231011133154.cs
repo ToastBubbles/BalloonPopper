@@ -15,12 +15,10 @@ public partial class State_handler : Node2D
 	Timer timer;
 	Label scoreLabel;
 	Label missesLabel;
-	Label debugLabel;
 	public override void _Ready()
 	{
 		audioPlayerFail = GetNode<AudioStreamPlayer2D>("FailAudio");
 		timer = GetNode<Timer>("Timer");
-		debugLabel = GetNode<Label>("Debug");
 		scoreLabel = GetNode<Label>("Score");
 		missesLabel = GetNode<Label>("Misses");
 		timer.Timeout += IncreaseDifficulty;
@@ -32,16 +30,13 @@ public partial class State_handler : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
 	}
 
 	public void AddPoint(int pointsToAdd)
 	{
-		if (misses == 0)
-		{
-			score += pointsToAdd;
-			scoreLabel.Text = "Score: " + score.ToString();
-		}
+		if(misses == 0){
+		score += pointsToAdd;
+		scoreLabel.Text = "Score: " + score.ToString();
 	}
 
 	private void IncreaseDifficulty()
@@ -50,7 +45,6 @@ public partial class State_handler : Node2D
 		{
 			balloonSpeedAdd += 10f;
 		}
-		debugLabel.Text = "Speed add: " + balloonSpeedAdd.ToString();
 	}
 	public void MissedBalloon()
 	{

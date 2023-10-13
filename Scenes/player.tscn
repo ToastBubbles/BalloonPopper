@@ -1,19 +1,21 @@
 [gd_scene load_steps=2 format=3 uid="uid://raifkve7yqnp"]
 
-[ext_resource type="Texture2D" uid="uid://dtwcjahmssnxm" path="res://Imgs/pngimg.com - darts_PNG36.png" id="1_gqyyg"]
+[ext_resource type="Texture2D" uid="uid://cd3owihlh03ty" path="res://Imgs/dart.png" id="1_sbt4b"]
 
 [node name="Player" type="RigidBody2D"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-56, 11, 71, 16, 122, 2, 122, -3, 72, -16, -56, -10, -112, -36, -144, -18, -144, 20, -112, 36)
+polygon = PackedVector2Array(-59, 11, 97, 14, 111, 7, 111, -8, 95, -14, -60, -11, -86, -32, -127, -34, -144, 0, -127, 34, -86, 33)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 4
+position = Vector2(0, -0.75)
+rotation = -0.00349066
 scale = Vector2(0.37, 0.37)
-texture = ExtResource("1_gqyyg")
+texture = ExtResource("1_sbt4b")
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(142, -4, 152, 0, 142, 4, 122, 4, 122, -4)
+polygon = PackedVector2Array(138, -2, 149, 0, 139, 2, 113, 3, 113, -3)

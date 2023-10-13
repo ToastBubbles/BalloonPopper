@@ -50,7 +50,7 @@ public partial class State_handler : Node2D
 		{
 			balloonSpeedAdd += 10f;
 		}
-		debugLabel.Text = "Speed add: " + balloonSpeedAdd.ToString();
+		debugLabel.Text = "Speed add: " + 
 	}
 	public void MissedBalloon()
 	{

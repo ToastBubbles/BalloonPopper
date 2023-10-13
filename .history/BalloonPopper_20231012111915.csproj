@@ -1,0 +1,9 @@
+<Project Sdk="Godot.NET.Sdk/4.2.0-dev.4">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <ItemGroup>
+  <PackageReference Include="Microsoft.NETCore.App.Runtime.linux-bionic-arm64" Version="6.0.12" />
+</ItemGroup>
+  </PropertyGroup>
+</Project>

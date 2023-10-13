@@ -38,7 +38,7 @@ public partial class Balloon : RigidBody2D
 	public void ShuffleAttributes()
 	{
 
-		deviation = (GD.Randf() - 0.5f) * 75;
+		deviation = GD.Randf() - 0.5f * ;
 		floatSpeed = (float)GD.RandRange(-50, -150) - stateHandler.balloonSpeedAdd;
 		color = new(GD.Randf(), GD.Randf(), GD.Randf(), 1);
 		GetNode<Sprite2D>("BalloonSprite").Modulate = color;

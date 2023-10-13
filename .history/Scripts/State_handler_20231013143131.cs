@@ -32,7 +32,7 @@ public partial class State_handler : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
+		
 	}
 
 	public void AddPoint(int pointsToAdd)
@@ -50,7 +50,6 @@ public partial class State_handler : Node2D
 		{
 			balloonSpeedAdd += 10f;
 		}
-		debugLabel.Text = "Speed add: " + balloonSpeedAdd.ToString();
 	}
 	public void MissedBalloon()
 	{

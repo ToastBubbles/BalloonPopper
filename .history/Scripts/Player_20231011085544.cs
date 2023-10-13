@@ -24,7 +24,7 @@ public partial class Player : RigidBody2D
 		LookAt(mousePos);
 		// Interpolate the current rotation to the target rotation
 		// Rotation = (float)Mathf.Lerp(Rotation, targetRotation, RotationSpeed * delta);
-		Vector2 myPos = new Vector2((float)Mathf.Lerp(GlobalPosition.X, mousePos.X, delta * 2), (float)Mathf.Lerp(GlobalPosition.Y, mousePos.Y, delta * 2));
+		Vector2 myPos = new Vector2((float)Mathf.Lerp(GlobalPosition.X, mousePos.X, delta), (float)Mathf.Lerp(GlobalPosition.Y, mousePos.Y, delta));
 		Position = myPos;
 		lastMousePos = mousePos;
 	}
