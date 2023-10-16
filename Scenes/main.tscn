@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://babtkut6uvgwb"]
+[gd_scene load_steps=8 format=3 uid="uid://babtkut6uvgwb"]
 
 [ext_resource type="PackedScene" uid="uid://raifkve7yqnp" path="res://Scenes/player.tscn" id="1_olp6p"]
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="2_ioks5"]
@@ -7,9 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://css8xpm3ojnnj" path="res://Scenes/background.tscn" id="5_4v2f3"]
 [ext_resource type="PackedScene" uid="uid://cnaq5vyxwll1v" path="res://Scenes/state_handler.tscn" id="6_f3qv3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv3jf"]
+size = Vector2(180, 1100)
+
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_olp6p")]
+unique_name_in_owner = true
 position = Vector2(1426, 529)
 gravity_scale = 0.0
 can_sleep = false
@@ -22,7 +26,18 @@ stream = ExtResource("4_io2k5")
 volume_db = 20.0
 
 [node name="Background" parent="." instance=ExtResource("5_4v2f3")]
-z_index = -1
+z_index = -666
 position = Vector2(1176, 562)
 
 [node name="StateHandler" parent="." instance=ExtResource("6_f3qv3")]
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2531, 540)
+shape = SubResource("RectangleShape2D_hv3jf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-131, 540)
+shape = SubResource("RectangleShape2D_hv3jf")

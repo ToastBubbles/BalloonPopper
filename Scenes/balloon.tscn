@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dayoi6euxk3yf"]
+[gd_scene load_steps=6 format=3 uid="uid://dayoi6euxk3yf"]
 
 [ext_resource type="Script" path="res://Scripts/Balloon.cs" id="1_ynthk"]
 [ext_resource type="Texture2D" uid="uid://8voxfm8hcsoy" path="res://Imgs/balloonDeets.png" id="2_r5h2w"]
+[ext_resource type="Texture2D" uid="uid://4xh7j0a1b5y8" path="res://Imgs/pups/speed.png" id="3_gitkv"]
 [ext_resource type="Texture2D" uid="uid://bb2hwuend4j6y" path="res://Imgs/balloonRaw.png" id="3_oltsh"]
+[ext_resource type="Texture2D" uid="uid://vrhj21banxiw" path="res://Imgs/ballooonglow.png" id="5_6t2be"]
 
 [node name="Balloon" type="RigidBody2D"]
+collision_mask = 17
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_ynthk")
@@ -14,15 +17,28 @@ z_index = 1
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_r5h2w")
 
+[node name="PowerupSprite" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1, -10)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_gitkv")
+
 [node name="BalloonSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_oltsh")
+
+[node name="GlowBG" type="Sprite2D" parent="."]
+z_index = -2
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("5_6t2be")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 94, -26, 83, -56, 46, -69, 17, -75, -19, -67, -56, -45, -82, -19, -95, 0, -98, 19, -95, 45, -82, 67, -57, 76, -23, 69, 19, 53, 52, 28, 81)
 
 [node name="PopBox" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
+collision_mask = 128
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PopBox"]
 polygon = PackedVector2Array(0, 94, -26, 83, -56, 46, -69, 17, -75, -19, -67, -56, -45, -82, -19, -95, 0, -98, 19, -95, 45, -82, 67, -57, 76, -23, 69, 19, 53, 52, 28, 81)

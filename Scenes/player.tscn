@@ -16,6 +16,8 @@ texture = ExtResource("1_sbt4b")
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 129
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(138, -2, 149, 0, 139, 2, 113, 3, 113, -3)
